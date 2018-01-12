@@ -1,0 +1,59 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+        "airbnb",
+        "prettier",
+        "prettier/react"
+    ],
+    "rules": {
+        // enable additional rules
+        //"prettier/prettier": "error",
+        "linebreak-style": ["error", "windows"],
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        //"import/prefer-default-export" : ["off"],
+        "react/prefer-stateless-function": ["off"],
+        "prefer-destructuring": ["off"],
+        "max-len": ["error", 125],
+        "comma-dangle": ["off"],
+        "react/jsx-filename-extension": ["off"],
+        "react/prop-types": ["warn"],
+        "react/no-typos": ["warn"],
+        "arrow-parens": ["off"],
+        "react/sort-comp": ["off"],
+        "object-curly-newline": ["error", {
+            "ObjectExpression": {
+                "minProperties": 1
+            },
+            "ObjectPattern": {
+                "minProperties": 6,
+                "multiline": true
+            }
+        }],
+        "arrow-body-style": ["warn"],
+        "function-paren-newline": ["error", "consistent"],
+        "react/no-unused-prop-types": ["off"],
+        "react/forbid-prop-types": ["off"],
+        "no-param-reassign": ["warn"],
+        "jsx-a11y/click-events-have-key-events": ["off"],
+        "jsx-a11y/anchor-is-valid": ["off"],
+        "jsx-a11y/no-static-element-interactions": ["off"]
+    },
+    "parserOptions": {
+        "ecmaVersion": 2016,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": [
+        "prettier"
+    ],
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true,
+        "jest": true
+    }
+}
